@@ -1414,16 +1414,25 @@ export const agr = makeTheme({
   },
   buttons: {
     sm: {
-      padding: `${tokens.buttonsSmPaddingTopBottom} ${tokens.buttonsSmPaddingLeftRight} ${tokens.buttonsSmPaddingTopBottom} ${tokens.buttonsSmPaddingLeftRight} !important`,
+      minWidth: '32px',
+      minHeight: '32px',
+      padding: '5px 7px !important',
       ...text.caption.lg.semibold,
+      lineHeight: '20px',
     },
     md: {
-      padding: `${tokens.buttonsMdPaddingTopBottom} ${tokens.buttonsMdPaddingLeftRight} ${tokens.buttonsMdPaddingTopBottom} ${tokens.buttonsMdPaddingLeftRight} !important`,
+      minWidth: '40px',
+      minHeight: '40px',
+      padding: '7px 11px !important',
       ...text.body.sm.semibold,
+      lineHeight: '24px',
     },
     lg: {
-      padding: `${tokens.buttonsLgPaddingTopBottom} ${tokens.buttonsLgPaddingLeftRight} ${tokens.buttonsLgPaddingTopBottom} ${tokens.buttonsLgPaddingLeftRight} !important`,
+      minWidth: '56px',
+      minHeight: '56px',
+      padding: '13px 15px !important',
       ...text.body.sm.semibold,
+      lineHeight: '28px',
     },
     solid: {
       alignItems: 'center',
@@ -1433,10 +1442,9 @@ export const agr = makeTheme({
       lineHeight: '21px',
       fontWeight: '700',
       justifyContent: 'center',
-
       backgroundColor: tokens.buttonsPrimaryDefaultBackgroundColor,
       color: tokens.buttonsPrimaryDefaultColor,
-      border: '0px',
+      border: '1px solid transparent',
       '& .wrapper-icon-left-large': {
         display: 'flex',
         width: '20px',
@@ -1520,10 +1528,9 @@ export const agr = makeTheme({
       lineHeight: '21px',
       fontWeight: '700',
       justifyContent: 'center',
-
       backgroundColor: tokens.buttonsSecondaryDefaultBackgroundColor,
       color: tokens.buttonsSecondaryDefaultColor,
-      border: '0px',
+      border: '1px solid transparent',
       '& .wrapper-icon-left-large': {
         display: 'flex',
         width: '20px',
@@ -1607,7 +1614,6 @@ export const agr = makeTheme({
       lineHeight: '21px',
       fontWeight: '700',
       justifyContent: 'center',
-
       backgroundColor: tokens.buttonsSecondaryDefaultBackgroundColor,
       border: `1px solid ${tokens.buttonsSecondaryDefaultColor}`,
       color: tokens.buttonsSecondaryDefaultColor,
@@ -1698,9 +1704,8 @@ export const agr = makeTheme({
       lineHeight: '21px',
       fontWeight: '700',
       justifyContent: 'center',
-
       backgroundColor: 'transparent',
-      border: 'none',
+      border: '1px solid transparent',
       color: tokens.buttonsSecondaryDefaultColor,
 
       '& .wrapper-icon-left-large': {
@@ -2628,6 +2633,7 @@ export const agr = makeTheme({
   },
   tooltip: {
     position: 'relative',
+    display: 'inline-block',
     '&:hover .wrapper-tooltip': {
       opacity: 1,
     },
