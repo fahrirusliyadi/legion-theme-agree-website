@@ -1120,27 +1120,101 @@ export const agr = makeTheme({
         display: 'flex !important',
         flexDirection: 'row',
         alignItems: 'center !important',
-        height: 'none !important',
         backgroundColor: `${tokens.textFieldDefaultBackgroundColor}`,
         marginBottom: '30px',
+        sm: {
+          fontSize: '14px',
+          lineHeight: '20px',
+          '.wrap-icon-left': {
+            width: '12px',
+            height: '12px',
+            marginLeft: '8px',
+          },
+          '.wrap-icon-right': {
+            width: '12px',
+            height: '12px',
+            marginRight: '8px',
+          },
+          '.contain-prefix-left': {
+            paddingLeft: '8px',
+          },
+          '.contain-prefix-right': {
+            paddingRight: '8px',
+          },
+          '.limit-prefix-left': {
+            marginLeft: '7px',
+          },
+          '.limit-prefix-right': {
+            marginRight: '7px',
+          },
+        },
+        md: {
+          fontSize: '16px',
+          lineHeight: '24px',
+          '.wrap-icon-left': {
+            width: '16px',
+            height: '16px',
+            marginLeft: '8px',
+          },
+          '.wrap-icon-right': {
+            width: '16px',
+            height: '16px',
+            marginRight: '8px',
+          },
+          '.contain-prefix-left': {
+            paddingLeft: '8px',
+          },
+          '.contain-prefix-right': {
+            paddingRight: '8px',
+          },
+          '.limit-prefix-left': {
+            marginLeft: '7px',
+          },
+          '.limit-prefix-right': {
+            marginRight: '7px',
+          },
+        },
+        lg: {
+          fontSize: '18px',
+          lineHeight: '28px',
+          '.wrap-icon-left': {
+            width: '20px',
+            height: '20px',
+            marginLeft: '16px',
+          },
+          '.wrap-icon-right': {
+            width: '20px',
+            height: '20px',
+            marginRight: '16px',
+          },
+          '.contain-prefix-left': {
+            paddingLeft: '16px',
+          },
+          '.contain-prefix-right': {
+            paddingRight: '16px',
+          },
+          '.limit-prefix-left': {
+            marginLeft: '15px',
+          },
+          '.limit-prefix-right': {
+            marginRight: '15px',
+          },
+        },
       },
       containPrefLeft: {
         display: 'flex',
-        height: '-webkit-fill-available',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingLeft: `${tokens.textFieldPaddingLeftRight}`,
         pointerEvents: 'none',
         zIndex: 3,
       },
       wrapperPrefLeft: {
         color: `${tokens.textFieldPrefixsufixTextColor}`,
-        ...text.body.sm.semibold,
+        fontWeight: text.body.sm.semibold.fontWeight,
       },
       limitPrefLeft: {
         height: '24px',
         borderRight: `1px solid ${tokens.textFieldPrefixsufixLineColor}`,
-        marginLeft: `${tokens.textFieldPaddingLeftRight}`,
       },
       wrappPrefLeftIconLeft: {
         display: 'flex',
@@ -1152,7 +1226,6 @@ export const agr = makeTheme({
       },
       wrappIconLeft: {
         position: 'relative',
-        marginLeft: `${tokens.textFieldPaddingLeftRight}`,
         zIndex: 2,
         display: 'flex',
         alignItems: 'center',
@@ -1219,23 +1292,21 @@ export const agr = makeTheme({
         alignItems: 'center',
         width: '16px',
         height: '16px',
-        marginRight: `${tokens.textFieldPaddingLeftRight}`,
         cursor: 'pointer',
       },
       containPrefRight: {
         textAlign: 'center',
-        paddingRight: `${tokens.textFieldPaddingLeftRight}`,
         display: 'flex',
+        alignItems: 'center',
         zIndex: 3,
       },
       limitPrefRight: {
         height: '24px',
         borderRight: `1px solid ${tokens.textFieldPrefixsufixLineColor}`,
-        marginRight: `${tokens.textFieldPaddingLeftRight}`,
       },
       wrapperPrefRight: {
         color: `${tokens.textFieldPrefixsufixTextColor}`,
-        ...text.body.sm.semibold,
+        fontWeight: text.body.sm.semibold.fontWeight,
       },
       wrappLabelField: {
         justifyContent: 'space-between',
@@ -1249,7 +1320,7 @@ export const agr = makeTheme({
           color: tokens.tertiary600,
           svg: {
             verticalAlign: 'middle',
-          }
+          },
         },
         '.label-field-optional': {
           color: tokens.tertiary500,
@@ -1318,7 +1389,6 @@ export const agr = makeTheme({
         },
         border: '0',
         backgroundColor: 'transparent',
-        padding: `${tokens.textFieldPaddingTopBottom} ${tokens.textFieldPaddingLeftRight} ${tokens.textFieldPaddingTopBottom} ${tokens.textFieldPaddingLeftRight} !important`,
         zIndex: '2',
       },
       success: {
@@ -1342,7 +1412,6 @@ export const agr = makeTheme({
         zIndex: 2,
         border: '0',
         backgroundColor: 'transparent',
-        padding: `${tokens.textFieldPaddingTopBottom} ${tokens.textFieldPaddingLeftRight} ${tokens.textFieldPaddingTopBottom} ${tokens.textFieldPaddingLeftRight} !important`,
       },
       error: {
         '&::placeholder': {
@@ -1365,7 +1434,15 @@ export const agr = makeTheme({
         zIndex: 2,
         border: '0',
         backgroundColor: 'transparent',
-        padding: `${tokens.textFieldPaddingTopBottom} ${tokens.textFieldPaddingLeftRight} ${tokens.textFieldPaddingTopBottom} ${tokens.textFieldPaddingLeftRight} !important`,
+      },
+      sm: {
+        padding: '6px 8px',
+      },
+      md: {
+        padding: '8px',
+      },
+      lg: {
+        padding: '14px 16px',
       },
     },
     textarea: {
