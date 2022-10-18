@@ -21,13 +21,6 @@ jobs:
       - run: npx token-transformer tokens.json src/resources/agree-culture.json foundation,agree-culture,theme foundation --expandTypography --expandShadow
       # Create a light theme, exclude the global tokens
       - run: node build.js
-      # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
-      - name: 'Automated Version Bump'
-        uses: 'phips28/gh-action-bump-version@master'
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        with:
-          default: prerelease
       - name: Setup Node ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
