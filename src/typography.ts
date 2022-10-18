@@ -46,7 +46,7 @@ export const text = {
         fontSize: `${tokens.bodyLargeUnderlineBoldFontSize}`,
         lineHeight: `${tokens.bodyLargeUnderlineBoldLineHeight}`,
         fontWeight: 700,
-        textDecoration: `${tokens.bodyLargeUnderlineBoldTextDecoration}`,
+        textDecoration: 'underline',
         fontFamily: `${tokens.bodyLargeUnderlineBoldFontFamily}`,
       },
     },
@@ -131,7 +131,7 @@ export const text = {
         fontSize: `${tokens.captionLargeUnderlineFontSize}`,
         lineHeight: `${tokens.captionLargeUnderlineLineHeight}`,
         fontWeight: 400,
-        textDecoration: 'italic',
+        textDecoration: 'underline',
         fontFamily: `${tokens.captionLargeUnderlineFontFamily}`,
       },
       underline_semibold: {
@@ -179,7 +179,7 @@ export const text = {
         fontSize: `${tokens.captionSmallUnderlineFontSize}`,
         lineHeight: `${tokens.captionSmallUnderlineLineHeight}`,
         fontWeight: 400,
-        textDecoration: 'underilne',
+        textDecoration: 'underline',
         fontFamily: `${tokens.captionSmallUnderlineFontFamily}`,
       },
       underline_semibold: {
