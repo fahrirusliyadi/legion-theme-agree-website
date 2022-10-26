@@ -273,6 +273,7 @@ export const forms = (tokens: ThemeTokens): Theme['forms'] => {
         alignItems: 'center',
         width: '16px',
         height: '16px',
+        color: tokens.tertiary900,
       },
       wrappField: {
         position: 'absolute',
@@ -335,6 +336,7 @@ export const forms = (tokens: ThemeTokens): Theme['forms'] => {
         width: '16px',
         height: '16px',
         cursor: 'pointer',
+        color: tokens.tertiary900,
       },
       containPrefRight: {
         textAlign: 'center',
