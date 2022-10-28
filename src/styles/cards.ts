@@ -5,6 +5,8 @@ export const cards = (tokens: ThemeTokens) => {
     base: {
       borderRadius: tokens.radius4,
       overflow: 'hidden',
+      transition:
+        'box-shadow 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s',
     },
     flat: {
       backgroundColor: tokens.tertiary50,
@@ -15,8 +17,19 @@ export const cards = (tokens: ThemeTokens) => {
     },
     shadow: {
       backgroundColor: '#FFF',
-      boxShadow:
-        '0px 8px 40px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(0, 0, 0, 0.1)',
+      boxShadow: `${tokens.elevation51X} ${tokens.elevation51Y} ${tokens.elevation51Blur} ${tokens.elevation51Spread} ${tokens.elevation51Color}, ${tokens.elevation50X} ${tokens.elevation50Y} ${tokens.elevation50Blur} ${tokens.elevation50Spread} ${tokens.elevation50Color}`,
+    },
+    hoverable: {
+      '&:hover': {
+        boxShadow: `${tokens.elevation51X} ${tokens.elevation51Y} ${tokens.elevation51Blur} ${tokens.elevation51Spread} ${tokens.elevation51Color}, ${tokens.elevation50X} ${tokens.elevation50Y} ${tokens.elevation50Blur} ${tokens.elevation50Spread} ${tokens.elevation50Color}`,
+        transform: 'translateY(-2px)',
+      },
+    },
+    pressable: {
+      cursor: 'pointer',
+      '&:active': {
+        transform: 'scale(97%)',
+      },
     },
     header: {
       padding: `${tokens.spacing4} ${tokens.spacing4} 0`,
