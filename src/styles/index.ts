@@ -9,6 +9,10 @@ import { layout } from './layout';
 import { spacers } from './spacers';
 import { spinner } from './spinner';
 import { styles } from './styles';
+import { table } from './table';
+import { tableRow } from './tableRow';
+import { headCell } from './headCell';
+import { tableCell } from './tableCell';
 import { text } from './text';
 import { tooltip } from './tooltip';
 
@@ -24,6 +28,10 @@ export const makeThemeStyles = (tokens: ThemeTokens) => {
     spacers: spacers(),
     spinner: spinner(tokens),
     styles: styles(tokens),
+    table: table(),
+    tableRow: tableRow(tokens),
+    headCell: headCell(tokens),
+    tableCell: tableCell(tokens),
     text: text(tokens),
     tooltip: tooltip(tokens),
   };
