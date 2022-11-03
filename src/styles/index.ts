@@ -6,6 +6,7 @@ import { colorscard } from './colorscard';
 import { colors } from './colors';
 import { forms } from './forms';
 import { layout } from './layout';
+import { select } from './select';
 import { spacers } from './spacers';
 import { spinner } from './spinner';
 import { styles } from './styles';
@@ -25,6 +26,7 @@ export const makeThemeStyles = (tokens: ThemeTokens) => {
     colors: colors(tokens),
     forms: forms(tokens),
     layout: layout(),
+    select: select(tokens),
     spacers: spacers(),
     spinner: spinner(tokens),
     styles: styles(tokens),
