@@ -1,6 +1,9 @@
 import { ThemeTokens } from '../tokens';
+import { styles } from './styles';
 
 export const cards = (tokens: ThemeTokens) => {
+  const sx = styles(tokens);
+
   return {
     base: {
       borderRadius: tokens.radius4,
@@ -17,12 +20,12 @@ export const cards = (tokens: ThemeTokens) => {
     },
     shadow: {
       backgroundColor: '#FFF',
-      boxShadow: `${tokens.elevation51X} ${tokens.elevation51Y} ${tokens.elevation51Blur} ${tokens.elevation51Spread} ${tokens.elevation51Color}, ${tokens.elevation50X} ${tokens.elevation50Y} ${tokens.elevation50Blur} ${tokens.elevation50Spread} ${tokens.elevation50Color}`,
+      ...sx.elevation.elevation5,
     },
     hoverable: {
       '&:hover': {
-        boxShadow: `${tokens.elevation51X} ${tokens.elevation51Y} ${tokens.elevation51Blur} ${tokens.elevation51Spread} ${tokens.elevation51Color}, ${tokens.elevation50X} ${tokens.elevation50Y} ${tokens.elevation50Blur} ${tokens.elevation50Spread} ${tokens.elevation50Color}`,
         transform: 'translateY(-2px)',
+        ...sx.elevation.elevation5,
       },
     },
     pressable: {

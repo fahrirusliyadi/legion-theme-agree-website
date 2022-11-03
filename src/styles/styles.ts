@@ -1,8 +1,12 @@
-import { Theme } from '@theme-ui/css';
+import { Theme, ThemeUIStyleObject } from '@theme-ui/css';
 import { ThemeTokens } from '../tokens';
 import { color, text } from '..';
+import { ElevationVariant } from '../elevations';
 
-export const styles = (tokens: ThemeTokens): Theme['styles'] => {
+type ThemeStyles = Theme['styles'] & { elevation: ThemeStyleElevation };
+type ThemeStyleElevation = Record<ElevationVariant, ThemeUIStyleObject>;
+
+export const styles = (tokens: ThemeTokens): ThemeStyles => {
   return {
     a: {
       color: tokens.anchorDefaultColor,
@@ -556,6 +560,26 @@ export const styles = (tokens: ThemeTokens): Theme['styles'] => {
       },
       info900: {
         color: `${tokens.information900}`,
+      },
+    },
+    elevation: {
+      elevation0: {
+        boxShadow: `${tokens.elevation0X} ${tokens.elevation0Y} ${tokens.elevation0Blur} ${tokens.elevation0Spread} ${tokens.elevation0Color}`,
+      },
+      elevation1: {
+        boxShadow: `${tokens.elevation1X} ${tokens.elevation1Y} ${tokens.elevation1Blur} ${tokens.elevation1Spread} ${tokens.elevation1Color}`,
+      },
+      elevation2: {
+        boxShadow: `${tokens.elevation21X} ${tokens.elevation21Y} ${tokens.elevation21Blur} ${tokens.elevation21Spread} ${tokens.elevation21Color}, ${tokens.elevation20X} ${tokens.elevation20Y} ${tokens.elevation20Blur} ${tokens.elevation20Spread} ${tokens.elevation20Color}`,
+      },
+      elevation3: {
+        boxShadow: `${tokens.elevation31X} ${tokens.elevation31Y} ${tokens.elevation31Blur} ${tokens.elevation31Spread} ${tokens.elevation31Color}, ${tokens.elevation30X} ${tokens.elevation30Y} ${tokens.elevation30Blur} ${tokens.elevation30Spread} ${tokens.elevation30Color}`,
+      },
+      elevation4: {
+        boxShadow: `${tokens.elevation41X} ${tokens.elevation41Y} ${tokens.elevation41Blur} ${tokens.elevation41Spread} ${tokens.elevation41Color}, ${tokens.elevation40X} ${tokens.elevation40Y} ${tokens.elevation40Blur} ${tokens.elevation40Spread} ${tokens.elevation40Color}`,
+      },
+      elevation5: {
+        boxShadow: `${tokens.elevation51X} ${tokens.elevation51Y} ${tokens.elevation51Blur} ${tokens.elevation51Spread} ${tokens.elevation51Color}, ${tokens.elevation50X} ${tokens.elevation50Y} ${tokens.elevation50Blur} ${tokens.elevation50Spread} ${tokens.elevation50Color}`,
       },
     },
   };
