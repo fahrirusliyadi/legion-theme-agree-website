@@ -1,28 +1,34 @@
 import { ThemeTokens } from '..';
 
-const cssBaseText = {
-  fontFamily: 'Nunito Sans, sans-serif',
-  lineHeight: '150%',
-  display: 'block',
+const cssBaseText = (tokens: ThemeTokens) => {
+  return {
+    fontFamily: tokens.fontFamiliesSecondary,
+    lineHeight: '150%',
+    display: 'block',
+  };
 };
 
-const cssBaseLabel = {
-  ...cssBaseText,
-  fontWeight: '600',
-  fontSize: '16px',
-  marginBottom: '8px',
+const cssBaseLabel = (tokens: ThemeTokens) => {
+  return {
+    ...cssBaseText(tokens),
+    fontWeight: '600',
+    fontSize: '16px',
+    marginBottom: '8px',
+  };
 };
 
-const cassBaseCaption = {
-  ...cssBaseText,
-  fontWeight: '400',
-  fontSize: '14px',
-  marginTop: '8px',
-  display: 'flex',
-  alignItems: 'center',
-  svg: {
-    height: '16px',
-  },
+const cassBaseCaption = (tokens: ThemeTokens) => {
+  return {
+    ...cssBaseText(tokens),
+    fontWeight: '400',
+    fontSize: '14px',
+    marginTop: '8px',
+    display: 'flex',
+    alignItems: 'center',
+    svg: {
+      height: '16px',
+    },
+  };
 };
 
 const cssSelectControl = (
@@ -79,13 +85,13 @@ export const select = (tokens: ThemeTokens) => {
   return {
     label: {
       normal: {
-        ...cssBaseLabel,
+        ...cssBaseLabel(tokens),
       },
       error: {
-        ...cssBaseLabel,
+        ...cssBaseLabel(tokens),
       },
       success: {
-        ...cssBaseLabel,
+        ...cssBaseLabel(tokens),
       },
     },
     iconLeft: {
@@ -212,20 +218,20 @@ export const select = (tokens: ThemeTokens) => {
       },
     },
     hint: {
-      ...cassBaseCaption,
+      ...cassBaseCaption(tokens),
       color: `${tokens.tertiary600}`,
     },
     caption: {
       normal: {
-        ...cassBaseCaption,
+        ...cassBaseCaption(tokens),
         color: `${tokens.tertiary600}`,
       },
       error: {
-        ...cassBaseCaption,
+        ...cassBaseCaption(tokens),
         color: `${tokens.error500}`,
       },
       success: {
-        ...cassBaseCaption,
+        ...cassBaseCaption(tokens),
         color: `${tokens.success500}`,
       },
       icon: {
