@@ -1,34 +1,33 @@
 import { ThemeTokens } from '..';
 
-const cssBaseText = (tokens: ThemeTokens) => {
-  return {
-    fontFamily: tokens.fontFamiliesSecondary,
-    lineHeight: '150%',
-    display: 'block',
-  };
+const cssBaseText = {
+  lineHeight: '150%',
+  display: 'block',
 };
 
-const cssBaseLabel = (tokens: ThemeTokens) => {
-  return {
-    ...cssBaseText(tokens),
-    fontWeight: '600',
-    fontSize: '16px',
-    marginBottom: '8px',
-  };
+const cssBaseLabel = {
+  ...cssBaseText,
+  fontWeight: '600',
+  fontSize: '16px',
+  marginBottom: '8px',
 };
 
-const cassBaseCaption = (tokens: ThemeTokens) => {
-  return {
-    ...cssBaseText(tokens),
-    fontWeight: '400',
-    fontSize: '14px',
-    marginTop: '8px',
-    display: 'flex',
-    alignItems: 'center',
-    svg: {
-      height: '16px',
-    },
-  };
+const cssBaseIconLeft = {
+  lineHeight: 1,
+  display: 'flex',
+  alignItems: 'center',
+};
+
+const cassBaseCaption = {
+  ...cssBaseText,
+  fontWeight: '400',
+  fontSize: '14px',
+  marginTop: '8px',
+  display: 'flex',
+  alignItems: 'center',
+  svg: {
+    height: '16px',
+  },
 };
 
 const cssSelectControl = (
@@ -85,17 +84,18 @@ export const select = (tokens: ThemeTokens) => {
   return {
     label: {
       normal: {
-        ...cssBaseLabel(tokens),
+        ...cssBaseLabel,
       },
       error: {
-        ...cssBaseLabel(tokens),
+        ...cssBaseLabel,
       },
       success: {
-        ...cssBaseLabel(tokens),
+        ...cssBaseLabel,
       },
     },
     iconLeft: {
       sm: {
+        ...cssBaseIconLeft,
         paddingLeft: '6px',
         marginRight: '-6px',
         svg: {
@@ -104,6 +104,7 @@ export const select = (tokens: ThemeTokens) => {
         },
       },
       md: {
+        ...cssBaseIconLeft,
         paddingLeft: '8px',
         marginRight: '-4px',
         svg: {
@@ -112,6 +113,7 @@ export const select = (tokens: ThemeTokens) => {
         },
       },
       lg: {
+        ...cssBaseIconLeft,
         paddingLeft: '10px',
         marginRight: '-2px',
         svg: {
@@ -183,7 +185,7 @@ export const select = (tokens: ThemeTokens) => {
         },
         lg: {
           ...ccsSelectOption(tokens),
-          padding: '10px 12px',
+          padding: '8px 10px',
           fontSize: '18px',
         },
       },
@@ -208,30 +210,33 @@ export const select = (tokens: ThemeTokens) => {
       placeholder: {
         sm: {
           fontSize: '14px',
+          lineHeight: 1,
         },
         md: {
           fontSize: '16px',
+          lineHeight: 1,
         },
         lg: {
           fontSize: '18px',
+          lineHeight: 1,
         },
       },
     },
     hint: {
-      ...cassBaseCaption(tokens),
+      ...cassBaseCaption,
       color: `${tokens.tertiary600}`,
     },
     caption: {
       normal: {
-        ...cassBaseCaption(tokens),
+        ...cassBaseCaption,
         color: `${tokens.tertiary600}`,
       },
       error: {
-        ...cassBaseCaption(tokens),
+        ...cassBaseCaption,
         color: `${tokens.error500}`,
       },
       success: {
-        ...cassBaseCaption(tokens),
+        ...cassBaseCaption,
         color: `${tokens.success500}`,
       },
       icon: {
