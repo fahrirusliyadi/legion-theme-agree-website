@@ -32,6 +32,10 @@ export const accordion = (tokens: ThemeTokens) => {
         opacity: 1,
         transition: '.3s',
         height: 'auto',
+
+        '&.menu-content > div': {
+          display: 'block'
+        }
       },
     },
 
@@ -49,6 +53,11 @@ export const accordion = (tokens: ThemeTokens) => {
         fontWeight: 'bold',
         fontSize: '14px !important',
         borderBottom: '0 !important',
+
+        '&.is-menu:hover': {
+          background: `${tokens.primary400}`,
+          cursor: 'pointer',
+        },
       },
 
       '> svg': {
@@ -86,6 +95,10 @@ export const accordion = (tokens: ThemeTokens) => {
       '&.menu-content': {
         padding: `0 ${tokens.spacing3} !important`,
         borderBottom: '0 !important',
+
+        '&> div': {
+          display: 'none'
+        }
       },
     },
   };
